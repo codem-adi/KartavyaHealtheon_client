@@ -1,0 +1,144 @@
+.user-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center;
+     flex-direction: column;
+}
+
+.user-card-container {
+     display: flex;
+     gap: 10px;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+.button-group {
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+}
+
+.user-card {
+     width: 260px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     padding: 10px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     background-color: gray;
+}
+
+.profile-photo {
+     width: 100%;
+     height: 140px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.profile-view {
+     width: 120px;
+     height: 120px;
+     border-radius: 531px;
+     overflow: hidden;
+     border: 1px solid;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+}
+
+.profile-view>img {
+     width: 100%;
+     height: 100%;
+}
+
+.side-line {
+     height: 35px;
+     width: 2px;
+     background: white;
+}
+
+.user-details {
+     margin-top: 10px;
+}
+
+.button:first-child {
+     background-color: #4caf50;
+}
+
+.button:first-child:hover {
+     background-color: #275c29;
+}
+
+.button {
+     margin-top: 10px;
+     padding: 8px 16px;
+     background-color: #505050;
+     color: white;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     min-width: 100px;
+}
+
+.button:hover {
+     background-color: #363636;
+}
+
+.button:focus {
+     outline: none;
+}
+
+
+.search-bar-container {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 10px;
+}
+
+.search-bar {
+     padding: 10px 15px;
+     font-size: 16px;
+     border-radius: 10px;
+     background: transparent;
+     color: white;
+     border: 1px solid gray;
+     width: 50%;
+     min-width: 300px;
+}
+
+.show_qr_container {
+     padding: 7px;
+     margin-left: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     border: 1px solid gray;
+     border-radius: 10px;
+}
+
+.show_qr_container>input {
+     width: 20px;
+     height: 20px;
+     cursor: pointer;
+}
+
+.navigation-bar-container {
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-start;
+     margin-bottom: 10px;
+}
+
+.navigation-bar-container>button{
+     font-size: 16px;
+     padding: 5px 10px;
+     border-radius: 10px;
+     border: 1px solid gray;
+     background-color: transparent;
+     cursor: pointer;
+}
