@@ -28,7 +28,7 @@ const UserCard = ({ user }) => {
                     {showQR ?
                          <div className='profile-view'>
                               <div className='side-line'></div>
-                              <QRCode value={`http://192.168.0.106:5173/member/profile/${memberId}`} size={85} />
+                              <QRCode value={`${import.meta.env.VITE_BASE_URL}/member/profile/${memberId}`} size={85} />
                               <div className='side-line'></div>
 
                          </div>
