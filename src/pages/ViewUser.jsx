@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import logo from "../assets/Kartavya_logo.jpg"
 // import "../styles/ViewUser.css"
 
 const ViewUser = () => {
@@ -19,13 +20,15 @@ const ViewUser = () => {
                try {
                     const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/users?search=${memberId}`);
                     const [user] = response.data;
+                    console.log("user ", user);
                     setUserData({
                          name: user.name,
                          profilePhoto: user.profilePhoto,
                          phone: user.phone,
                          idType: user.govermentId.idType,
                          idNumber: user.govermentId.idNumber,
-                         employeType: user.employeType
+                         employeType: user.employeType,
+                         memberId: user.memberId
                     });
                } catch (error) {
                     console.error('Error fetching user:', error);
@@ -37,7 +40,6 @@ const ViewUser = () => {
 
      return (
           <div className="view-user">
-               <h2>User Details</h2>
                <Card user={userData} />
           </div>
      );
@@ -46,10 +48,15 @@ const ViewUser = () => {
 export default ViewUser;
 
 const Card = ({ user }) => {
-     const { name, profilePhoto, phone, memberId, employeType } = user;
+
+     console.log("User ", user);
+     const { name, profilePhoto, phone, idNumber, employeType, idType } = user;
 
      return (
           <div className="user-card">
+               <div className='brand-logo'>
+                    <img src={logo} />
+               </div>
                <div className="profile-photo" >
                     <div className='profile-view'>
                          <img src={profilePhoto} alt={`${name}'s profile`} />
@@ -58,11 +65,14 @@ const Card = ({ user }) => {
                <div className="user-details">
                     <>
                          <h3>{name}</h3>
-                         <p><strong>Phone:</strong> {phone}</p>
-                         <p><strong>Member ID:</strong> {memberId}</p>
-                         <p><strong>Employee Type:</strong> {employeType}</p>
+                         <p className='employe_type'>{employeType}</p>
+                         <div className='goverment_id_details'>
+                              <p><strong>{idType}</strong> </p>
+                              <p>{idNumber}</p>
+                         </div>
                     </>
                </div>
+               <div className='cross_line'></div>
           </div>
      );
 };

@@ -13,6 +13,15 @@
      justify-content: center;
 }
 
+.view-user {
+     width: 100vw;
+     min-height: 100vh;
+     background-color: rgb(33, 33, 33);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
 .button-group {
      display: flex;
      justify-content: space-evenly;
@@ -20,25 +29,35 @@
 }
 
 .user-card {
-     width: 260px;
+     /* width: 260px; */
      border: 1px solid #ccc;
      border-radius: 5px;
      padding: 10px;
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-     background-color: gray;
+     /* background-color: gray; */
+     background-image: url("../assets/background.png");
+     background-size: cover;
+     background-position: center;
+     min-width: 350px;
+     min-height: 600px;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
 }
 
 .profile-photo {
      width: 100%;
-     height: 140px;
+     height: 170px;
      display: flex;
      justify-content: center;
      align-items: center;
+     margin-bottom: 65px;
 }
 
 .profile-view {
-     width: 120px;
-     height: 120px;
+     width: 150px;
+     height: 150px;
      border-radius: 531px;
      overflow: hidden;
      border: 1px solid;
@@ -59,7 +78,24 @@
 }
 
 .user-details {
-     margin-top: 10px;
+     margin-top: 20px;
+     color: black;
+}
+
+.user-details>h3 {
+     font-size: 32px;
+     margin: 0px;
+     text-transform: uppercase;
+}
+
+.user-details>p,
+.user-details>div>p {
+     margin: 0px;
+}
+
+.employe_type {
+     letter-spacing: 1px;
+     word-spacing: 5px;
 }
 
 .button:first-child {
@@ -134,11 +170,37 @@
      margin-bottom: 10px;
 }
 
-.navigation-bar-container>button{
+.navigation-bar-container>button {
      font-size: 16px;
      padding: 5px 10px;
      border-radius: 10px;
      border: 1px solid gray;
      background-color: transparent;
      cursor: pointer;
+}
+
+.brand-logo {
+     width: 100%;
+     height: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 15px 0px;
+}
+
+.brand-logo>img {
+     width: 75%;
+     height: 80%;
+     aspect-ratio: auto;
+}
+
+.goverment_id_details {
+     margin-top: 20px;
+}
+
+.cross_line {
+     width: 80%;
+     height: 5px;
+     background-color: #c5dc58;
+     margin-top: 20px;
 }
